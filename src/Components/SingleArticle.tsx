@@ -1,5 +1,6 @@
 import { Article } from "../Types/Article"
 import { Col,Card } from "react-bootstrap"
+import { Link } from "react-router-dom"
 
 interface SingleArticleProps {
     article: Article
@@ -13,6 +14,7 @@ interface SingleArticleProps {
           <Card.Body>
             <Card.Title>{props.article.title}</Card.Title>
             <Card.Text>{props.article.published_at}</Card.Text>
+            <Link to={`/article/${props.article.id}`}>Leggi di più</Link>
           </Card.Body>
         </Card>
       </Col>
